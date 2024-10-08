@@ -1,0 +1,35 @@
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.switch-user-btn {
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    height: 18px;
+    color: rgb(0, 149, 246);
+    cursor: pointer;
+}
+
+.user-info-full-and-first-name {
+    display: flex;
+    flex-direction: column;
+    width:135px;
+}
+
+.user-info-full-name {
+    font-family: -apple-system,"system-ui","Segoe UI",Roboto,Helvetica,Arial,sans-serif ;
+    font-size: 14px; 
+    font-weight: 600; 
+    height: 18px ;
+    line-height: 18px;
+}
+
+.user-info-first-name {
+    color: rgb(115, 115, 115);
+    font-family: -apple-system,"system-ui","Segoe UI",Roboto,Helvetica,Arial,sans-serif ;
+    font-size: 14px ;
+    font-weight: 400;
+}
