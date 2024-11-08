@@ -10,7 +10,6 @@ export function ChatApp() {
     const [isBotMode, setIsBotMode] = useState(false)
 
     const loggedInUser = useSelector(storeState => storeState.userModule.user)
-
     const botTimeoutRef = useRef()
 
     useEffect(() => {

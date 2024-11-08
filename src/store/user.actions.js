@@ -1,7 +1,6 @@
 import { userService } from '../services/user.service'
 import { socketService } from '../services/socket.service'
 import { store } from '../store/store'
-
 import { showErrorMsg } from '../services/event-bus.service'
 import { LOADING_DONE, LOADING_START } from './system.reducer'
 import { REMOVE_USER, SET_USER, SET_USERS, SET_WATCHED_USER } from './user.reducer'
@@ -11,6 +10,7 @@ export async function loadUsers() {
         store.dispatch({ type: LOADING_START })
         const users = await userService.getUsers()
         store.dispatch({ type: SET_USERS, users })
+    
     } catch (err) {
         console.log('UserActions: err in loadUsers', err)
     } finally {

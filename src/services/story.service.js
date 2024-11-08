@@ -1,5 +1,4 @@
 
-// import { storageService } from './async-storage.service'
 import { httpService } from './http.service'
 import { utilService } from './util.service'
 
@@ -18,6 +17,7 @@ window.cs = storyService
 
 
 async function query(filterBy = { txt: '', price: 0 }) {
+    //todo: do the filter here - before saveing to store filter post.userId is in connectedUser.followingIds
     return httpService.get(STORAGE_KEY, filterBy)
 }
 
