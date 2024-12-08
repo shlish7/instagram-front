@@ -1,6 +1,26 @@
 /* Pages */
-@import "./pages/homePage.css";
+/* @import "./pages/homePage.css"; */
 @import "./pages/profile.css";
+@import "./pages/feed-item-full-screen.css";
+@import "./pages/login-page.css";
+@import "./pages/explore.css";
 
 /* Components */
-@import "./cmps/sideBar.css";
+@import "./cmps/left-side-bar.css";
+@import "./cmps/right-side-bar.css";
+@import "./cmps/profile-body.css";
+@import "./cmps/suggestion.css";
+@import "./cmps/chat.css";
+
+/* @import "./cmps/home-feed.css"; */
+@import "./cmps/AvatarsStoryView.css";
+@import "./cmps/StoryAvatar.css";
+@import "./cmps/feed-item.css";
+@import "./cmps/comments-view.css";
+@import "./cmps/comments-index.css";
+@import "./cmps/comments-preview.css";
+@import "./cmps/create-post.css";
+@import "./cmps/search-bar.css";
+@import "./cmps/buttons-view.css";
+@import "./cmps/likes-list.css";
+@import "./cmps/follows-lists.css";

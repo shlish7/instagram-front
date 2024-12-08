@@ -1,0 +1,125 @@
+.search-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 397px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 73px;
+    border-bottom-right-radius: 18px;
+    border-top-right-radius: 18px;
+    opacity: 1;
+    background-color: white;
+    /* border: 0.5px solid rgb(219, 219, 219); */
+    border-right: 0.5px solid rgb(219, 219, 219);
+    border-left: 0.5px solid rgb(219, 219, 219);
+    z-index: 4;
+    padding: 0;
+
+}
+
+/* .search-bar-section{
+    border-bottom: 0.5px solid rgb(219, 219, 219);
+
+} */
+.search-bar-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8px 16px 8px 16px;
+    margin-top: 10px;
+    color: rgb(239, 239, 239);
+    position: relative;
+    height: 32px;
+    padding-bottom:40px;
+    border-bottom: 0.5px solid rgb(219, 219, 219);
+
+
+}
+
+.search-span {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 12px 14px 36px 24px;
+    margin: 8px;
+    color: black;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 125px;
+    width: 100%;
+    border-bottom: 0.5px solid rgb(219, 219, 219);
+    /* background-color: wheat;
+    padding:3px 0 3px 0; */
+
+
+}
+
+.search-input {
+    width: 368px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    /* padding: 8px 16px 8px 16px; */
+    padding: 3px 16px 3px 16px;
+    background-color: rgb(239, 239, 239);
+    outline: none;
+    margin-bottom: 24px;
+
+}
+
+.search-bar-users-list{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.search-bar-users-ul{
+
+    align-items: flex-start;
+    padding: 10px 0 10px 0;
+    margin-left: 10px;
+    list-style-type: none;
+    width: 100%;
+}
+
+.search-bar-user-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.search-bar-user-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    color: black;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    height: fit-content;
+
+}
+
+.search-bar-full-name {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: rgb(115, 115, 115);
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: fit-content;
+}

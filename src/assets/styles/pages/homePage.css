@@ -1,52 +1,244 @@
-*{
+
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-.instagram-home-page{
+body,
+html {
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling on the entire page */
+}
+
+.instagram-app {
+    width: 100vw;
+    height: 100vh;
+}
+
+.instagram-home-page {
     display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+    /* grid-template-columns: 220px 1fr 319px; */
+    grid-template-columns: 72px 1fr 319px;
     grid-template-rows: 1fr 9fr;
-    grid-template-areas: 
-    "left-aside main-header right-aside"
-    "left-aside main-feed right-aside";
-    min-height: 100vh;
-    width:100vw;
+    grid-template-areas:
+        "left-aside main-header right-aside"
+        "left-aside main-feed right-aside";
+    height: 100vh;
+    width: 100vw;
+    padding-top: 0;
 }
 
-.home-header{
+.home-header {
     grid-area: main-header;
-    background-color: yellow;
+    /* max-width: 1690px; */
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+
 }
 
-.home-left-side-bar{
+.home-left-side-bar {
+    position: absolute;
     grid-area: left-aside;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 2px;
+    /* padding-right: 12px; */
+    
 }
 
-.home-feed{
+.home-right-bar {
+    grid-area: right-aside;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.home-feed {
     grid-area: main-feed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow-y: scroll; */
+    margin-top: 25px;
+
 }
 
-.home-right-suggestion{
-grid-area: right-aside;
-background-color: blanchedalmond;
+
+
+.home-feed-container {
+    width: 468px;
+    border-bottom: 1px solid rgb(219, 219, 219);
+
+
 }
 
-.home-header{
-    color: green;
-}
 
-.instagram-logo{
+.instagram-logo {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100px;
     width: 100%;
 
+}
+
+.img-title-container {
+    width: 100%;
+    display: flex;
+
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+    padding: 5px 0;
+
+}
+
+.avatar-and-user-details {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 0;
+}
+
+.home-page-img-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+
+.home-user-title-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.feed-item-img-icons {
+    display: flex;
+    justify-content: space-between;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    padding: 10px 0 10px 0;
+}
+
+.feed-item-img-icons-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.home-title-user-name {
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.home-title-dot {
+    display: flex;
+    align-items: center;
+    color: #737373;
+    height: 18px;
+    width: 6.5px;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 18px;
+    line-height: 18px;
+}
+
+.home-title-verified {
+    width: auto;
+    height: auto;
+}
+
+.home-posted-time {
+    color: #737373;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: auto;
+    line-height: 18px;
+}
+
+.home-more-options-icon {
+    display: flex;
+    align-items: center;
+}
+
+.home-title-details {
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 18px;
+    line-height: 16px;
+}
+
+.home-title-caption {
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    height: 18px;
+    line-height: 16px;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.like-count-container {
+    display: flex;
+    gap: 4px;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+.home-img-description-container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;  
+    width: 100%;
+    padding: 5px 0;
+}
+
+.home-img-user-name {
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: fit-content;
+    margin-right: 5px; 
+    align-self: flex-start;
+}
+
+.home-img-detailes {
+    display: inline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1; 
+}
+
+.home-img-detailes.expanded {
+    white-space: normal;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    color: lightgray;
+    cursor: pointer;
+    padding: 0;
+    font-size: 14px;
+    text-transform: lowercase;
 }

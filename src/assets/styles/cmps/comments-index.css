@@ -1,0 +1,62 @@
+.comments-list-section{
+}
+
+.comments-index{
+    max-height: 920;
+    /* max-width: 500px; */
+    width: 100%;
+    padding: 0;
+    border-bottom: 1px solid rgb(239, 239, 239);
+    height:100%;
+}
+
+.comments-list-ul-full-screen{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap:10px;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+  
+}
+
+.comments-list-li-full-screen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap:8px
+}
+
+.comments-user-name-full-screen{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family:-apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:black;
+    font-weight: 600;
+
+}
+
+.comment-full-screen{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-family:-apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:black;
+    font-weight: 400;
+    height: 20px;
+}
+
+.comment-likes{
+    height: 12px;
+    width: 12px;
+}
+
+
+
