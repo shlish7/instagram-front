@@ -10,7 +10,6 @@ export function UserMsg() {
   useEffect(() => {
     const unsubscribe = eventBus.on('show-msg', (msg) => {
       setMsg(msg)
-      // window.scrollTo({ top: 0, behavior: 'smooth' })
       if (timeoutIdRef.current) {
         timeoutIdRef.current = null
         clearTimeout(timeoutIdRef.current)
@@ -33,6 +32,7 @@ export function UserMsg() {
   }
 
   if (!msg) return <span></span>
+  
   return (
     <section className={`user-msg ${msg.type}`}>
       <button onClick={closeMsg}>x</button>

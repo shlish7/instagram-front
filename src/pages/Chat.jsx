@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useSelector } from 'react-redux'
 
 import { socketService, SOCKET_EMIT_SEND_MSG, SOCKET_EVENT_ADD_MSG, SOCKET_EMIT_SET_TOPIC } from '../services/socket.service'
+import ChatIndex from '../cmps/Chat/ChatIndex'
+import {ChatMessagesDetails} from '../cmps/Chat/ChatMessagesDetails'
+import { LeftSideBar } from '../cmps/LeftSideBar.jsx';
 
 export function ChatApp() {
     const [msg, setMsg] = useState({ txt: '' })
@@ -10,7 +13,6 @@ export function ChatApp() {
     const [isBotMode, setIsBotMode] = useState(false)
 
     const loggedInUser = useSelector(storeState => storeState.userModule.user)
-
     const botTimeoutRef = useRef()
 
     useEffect(() => {
@@ -21,12 +23,14 @@ export function ChatApp() {
         }
     }, [])
 
-    useEffect(() => {
-        socketService.emit(SOCKET_EMIT_SET_TOPIC, topic)
-    }, [topic])
+    // useEffect(() => {
+    //     socketService.emit(SOCKET_EMIT_SET_TOPIC, topic)
+    // }, [topic])
 
     function addMsg(newMsg) {
         setMsgs(prevMsgs => [...prevMsgs, newMsg])
+        console.log('add msg', addMsg);
+
     }
 
     function sendBotResponse() {
@@ -54,6 +58,8 @@ export function ChatApp() {
     }
 
     return (
+        <div className='chat-page'> 
+        <LeftSideBar chat ={true}/>
         <section className="chat">
             <h2>Lets Chat about {topic}</h2>
 
@@ -90,5 +96,8 @@ export function ChatApp() {
                 {msgs.map((msg, idx) => (<li key={idx}>{msg.from}: {msg.txt}</li>))}
             </ul>
         </section>
+        {/* <ChatIndex/> */}
+        {/* <ChatMessagesDetails/> */}
+        </div>
     )
 }

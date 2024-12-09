@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.create-post-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    aspect-ratio: 1;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    box-shadow:
+        0 0 0 100vmax rgba(0, 0, 0, 0.16);
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    z-index: 6;
+    border-radius: 12px;
+    max-height: calc(100vh - 40px);
+    /* max-height: 857px; */
+    max-width: 855px;
+    /* max-width: 1114px; */
+    min-height: 391px;
+    min-width: 348px;
+}
+.create-post-container,
+.create-post-wide-container {
+    transition: max-width 0.3s ease-in-out;
+}
+
+
+
+
+.create-post-title {
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-size-adjust: none;
+    font-stretch: 100%;
+    /* border-bottom: 1px solid rgb(215, 215, 215); */
+
+
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%; */
+    width:calc(100% - 126.844px);
+}
+
+.modal-internal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+
+.select-from-computer {
+    background-color: rgb(0, 149, 246);
+    color: white;
+    border-radius: 8px;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.drag-photos-span {
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.close-modal-icon-create-post {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    /* color: rgb(255, 255, 255); */
+    color: #fcffff;
+    cursor: pointer;
+z-index: 7;
+
+}
+
+.save-img-to-db-btn {
+    background-color: rgb(0, 149, 246);
+    color: white;
+    border-radius: 8px;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-optical-sizing: auto;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.next-pic-create-post{
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(0, 149, 246);
+    background-color: white;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    /* padding:16px; */
+
+}
+
+.next-pic-create-post:hover{
+    color:#00376B;
+
+}
+
+.create-post-title-container{
+    display: flex;
+    width: 100%;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(215, 215, 215);
+
+}
+
+.back-icon{
+    padding-left: 8px;
+}
+
+
+.img-description{
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    padding-right: 0;
+
+
+}
+
+.create-post-img-description{
+
+    width:60%;
+    height: 100%;
+    border-right: 1px solid rgb(215, 215, 215);
+
+}
+
+.create-post-img{
+    width:100%;
+    height: 100%;
+    border:none;
+
+}
+
+.create-post-avatar-and-text-area{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+   
+}
+
+.create-post-description{
+        border-bottom: 1px solid rgb(215, 215, 215);
+
+}
+
+.create-post-avatar-and-username{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
+    height: 60px;
+    width: 100%;
+    margin: 0 16px 0 16px;
+
+}
+
+.description-text-area{
+    width:100%;
+    height: 168px;
+    outline: none;
+    border:none;
+    resize: none;
+    /* border-bottom: 1px solid rgb(215, 215, 215); */
+    
+}
+.create-post-emoji-icon{
+    position: relative;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+
+
+
+.create-post-user-name{
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif ;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+}
+
+.emoji-picker-wrapper {
+    /* position: absolute; */
+    top: 330px; /* Adjust based on the height of your emoji picker icon */
+    right: -8px; /* Adjust to align it to the right of the icon */
+    z-index: 10; /* Ensure it appears above other elements */
+    background-color: white; /* Optional for better visibility */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional for a nice shadow effect */
+    border-radius: 8px; /* Optional for rounded corners */
+    width: fit-content;
+    height: fit-content;
+}
+

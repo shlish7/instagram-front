@@ -1,0 +1,120 @@
+.home-add-comment {
+    /* max-height: 80px; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+    padding-top: 10px;
+
+    margin-top: 10px;
+    resize: none;
+    font-family:-apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.home-add-comment-full-screen{
+    padding-top: 10px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.add-comment-and-emoji {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* padding: 0 10px; */
+    padding: 10px 0 5px 0; 
+    position: relative;
+    /* This ensures the emoji picker will be positioned relative to this container */
+}
+
+.emoji-picker-container {
+    position: relative;
+    
+
+}
+
+
+
+.emoji-picker-wrapper {
+    position: absolute;
+    bottom: 40px;
+    /* Adjust height to open upwards */
+    right: -350px;
+    /* Adjust to move picker to the right */
+    z-index: 100;
+    /* Ensure it's on top of other elements */
+    background-color: white;
+    /* Ensure it's visible with a background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Optional: Add a shadow */
+}
+
+.post-comment-btn {
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(0, 149, 246);
+    background-color: white;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 10;
+    padding: 0;
+
+}
+
+.post-comment-btn-opacity{
+
+    opacity: .5;
+}
+.post-comment-btn-hidden{
+        visibility: hidden;
+
+}
+
+.new-comment-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.new-comment-user-name {
+    color: black;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.new-comment {
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.new-comment-details{
+    display: flex;
+    align-items: center;
+    gap:4px;
+    padding: 5px 0;
+}
+
+.home-comments{
+    padding: 0;
+}
+
+.home-comments-container{
+    padding: 5px 0;
+
+}
+
+.emoji-picker{
+    width: 13px;
+    height: 13px;
+}

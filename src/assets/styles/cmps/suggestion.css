@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.suggestion-users{
+    margin-top: 20px;
+}
+.suggestion-span{
+    color: rgb(115, 115, 115);
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.suggestion-ul{
+    list-style-type: none;
+    margin-top: 10px;
+}
+.suggestion-li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:8px;
+    height: 44px;
+}
+
+.suggested-user-details{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:8px;
+    padding-left: 0;
+    margin-left: 0;
+
+}
+
+/* .suggest-follow-btn{
+    color:rgb(0, 149, 246);
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600 ;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+
+} */
+
+.suggestion-username{
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+
+}
+
+.suggest-follow-btn {
+    color:rgb(0, 149, 246);
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600 ;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;    transition: color 0.3s ease;
+}
+
+.suggest-follow-btn.following {
+    color: black;
+    font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600 ;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}

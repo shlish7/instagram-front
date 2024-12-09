@@ -1,48 +1,49 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-
-import { SideBar } from '../cmps/SideBar.jsx'
-import ImageAvatars from '../cmps/ImageAvatars.jsx'
+import { LeftSideBar } from '../cmps/LeftSideBar.jsx'
+import ProfileHeader from '../cmps/profile/ProfileHeader.jsx';
+import ProfileBody from '../cmps/profile/ProfileBody.jsx';
+import { loadFeedItems } from '../store/feedItem.actions.js';
+import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router';
+import { userService } from '../services/user.service.remote.js';
 
 export function Profile() {
+    const feedItems = useSelector(storeState => storeState.feedItemModule.feedItems)
+    const navigate = useNavigate()
+    const { userId } = useParams()
+    const [user,setUser] = useState() 
+
+    useEffect(() => {
+      loadFeedItems()
+    
+    }, [])
+
+    useEffect(() => {
+      getUser()
+    }, [userId])
+
+    async function getUser(){
+      const currentUser = await userService.getById(userId)
+      setUser(currentUser)
+    }
+
+
+  function onOpenFeedItem(ev, id) {
+    ev.stopPropagation()
+    ev.preventDefault()
+    navigate(`/p/${id}`)
+  }
+
     return (<>
         <section className='profile-page'>
             <aside className="profie-left-side-bar">
-                <SideBar />
+                <LeftSideBar />
             </aside>
             <main className='profile-main-side'>
-                <header className='profile-main-header'>
-                    <section className="profile-pic" >
-                        <ImageAvatars avatarHeight='150px !important' avatarWidth='150px !important' />
-                    </section>
-                    <section className='header-btns'>
-                        <section className='profile-link-buttons'>
-                            <Link className='profile-link-button'>Edit Profile</Link>
-                            <Link className='profile-link-button'>View Archive</Link>
-                        </section>
-                        <section className='profile-follows-lists'>
-                            <section className='profile-follows'>
-                                <span className='profile-counts'>100</span>
-                                <span>Posts</span>
-                            </section>
-                            <section className='profile-follows'>
-                                <span className='profile-counts'>500</span>
-                                <span>Followers</span>
-                            </section>
-                            <section className='profile-follows'>
-                                <span className='profile-counts'>200</span>
-                                <span>Following</span>
-                            </section>
-                        </section>
-                    </section>
-
-                    <h1>Test</h1>
-                </header>
-                <div className="profile-main-container">
-
-
-                </div>
-
+              <section className="profile-main-container">      
+                {user && <ProfileHeader feedItems={feedItems} user={user}/>}
+                {user && <ProfileBody feedItems={feedItems} user={user} onOpenFeedItem={onOpenFeedItem}/>}
+              </section>
             </main>
         </section>
 
